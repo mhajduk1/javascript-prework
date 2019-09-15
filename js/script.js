@@ -1,24 +1,6 @@
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+//let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 let computerMove = getMoveName(randomNumber);
-function getMoveName(moveNr) {
-        if (moveNr == 1) {
-            return 'kamień';
-        } else if (moveNr == 2) {
-            return 'papier';
-        } else if (moveNr == 3) {
-            return 'nożyce';
-        } else {
-            return 'Nie podałeś ruchu! Tak nie da się grać!';
-        }
-      }
-/*if(playerInput == '1'){
-  playerMove = 'kamień';
-}else if (playerInput  == '2') {
-	playerMove = 'papier';
-}else if (playerInput == '3') {
-	playerMove = 'nożyce';
-}*/
 //ruch komputera
 /*if(randomNumber == 1){
   computerMove = 'kamień';
@@ -32,21 +14,18 @@ function getMoveName(moveNr) {
 }
 */
 //warunki wygranych
-function displayResult(argComputerMove, argPlayerMove) {
-        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-      }
-if( computerMove == 'kamień' && playerMove == 'papier'){
+if( computerMove == 'kamień' && getMoveName == 'papier'){
   printMessage('Ty wygrywasz!');
-}else if( computerMove == 'papier' && playerMove == 'nożyce'){
+}else if( computerMove == 'papier' && getMoveName == 'nożyce'){
   printMessage('Ty wygrywasz!');
-}else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+}else if( computerMove == 'nożyce' && getMoveName == 'kamień'){
   printMessage('Ty wygrywasz!');
-}else if (computerMove == playerMove) {
+}else if (computerMove == getMoveName) {
 	printMessage('Remis!');
-}else if( playerMove == 'kamień' && computerMove == 'papier'){
+}else if( getMoveName == 'kamień' && computerMove == 'papier'){
   printMessage('Komputer wygrywa!');
-}else if( playerMove == 'papier' && computerMove == 'nożyce'){
+}else if( getMoveName == 'papier' && computerMove == 'nożyce'){
   printMessage('Komputer wygrywa!');
-}else if( playerMove == 'nożyce' && computerMove == 'kamień'){
+}else if( getMoveName == 'nożyce' && computerMove == 'kamień'){
   printMessage('Komputer wygrywa!');
 }
