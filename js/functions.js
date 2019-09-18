@@ -1,12 +1,9 @@
 function playGame(playerInput){
-  //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
   clearMessages();
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   let computerMove = getMoveName(randomNumber);
   let playerMove = getMoveName(playerInput);
-
-
-displayResult(computerMove ,playerMove);
+  displayResult(computerMove, playerMove);
 }
 function printMessage(msg){
 	var div = document.createElement('div');
