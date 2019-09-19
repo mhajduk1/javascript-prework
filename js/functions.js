@@ -1,8 +1,9 @@
 function playGame(playerInput){
   clearMessages();
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
-  let computerMove = getMoveName(randomNumber);
-  let playerMove = getMoveName(playerInput);
+  let randomNumber = Math.floor(Math.random() * 3 + 1),
+  computerMove = getMoveName(randomNumber),
+  description;
+  const playerMove = getMoveName(playerInput);
   displayResult(computerMove, playerMove);
 }
 function printMessage(msg){
