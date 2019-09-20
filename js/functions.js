@@ -1,17 +1,16 @@
 function playGame(playerInput){
   clearMessages();
   let randomNumber = Math.floor(Math.random() * 3 + 1),
-  computerMove = getMoveName(randomNumber),
-  description;
+  computerMove = getMoveName(randomNumber);
   const playerMove = getMoveName(playerInput);
   displayResult(computerMove, playerMove);
 }
 function printMessage(msg){
-	var div = document.createElement('div');
+	const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
-function clearMessages(){
+const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 }
 function getMoveName(moveNr) {
