@@ -1,11 +1,11 @@
-function playGame(playerInput){
+const playGame = function(playerInput){
   clearMessages();
   let randomNumber = Math.floor(Math.random() * 3 + 1),
   computerMove = getMoveName(randomNumber);
   const playerMove = getMoveName(playerInput);
   displayResult(computerMove, playerMove);
 }
-function printMessage(msg){
+const printMessage = function(msg){
 	const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
@@ -13,7 +13,7 @@ function printMessage(msg){
 const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 }
-function getMoveName(moveNr) {
+const getMoveName = function(moveNr)  {
   if (moveNr == 1) {
       return 'kamień';
   } else if (moveNr == 2) {
@@ -24,7 +24,7 @@ function getMoveName(moveNr) {
       return 'Nie podałeś ruchu! Tak nie da się grać!';
   }
 }
-function displayResult(computerMove, playerMove) {
+const  displayResult = function(computerMove, playerMove) {
 		printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 		if( computerMove == 'papier' && playerMove == 'kamień'){
 			printMessage('Komputer wygrywa!');
